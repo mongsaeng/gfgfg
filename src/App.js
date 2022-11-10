@@ -4,12 +4,12 @@ import Detail from "./routes/Detail";
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/movie/:id" element={<Detail />}></Route>
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />}></Route>
+        <Route path={`${process.env.PUBLIC_URL}/movie/:id`} element={<Detail />}></Route>
         {/* id라는 변수를 가져온다. */}
-        <Route path="/hello" element={<h1>hello</h1>}></Route>
+        <Route path={`${process.env.PUBLIC_URL}/hello`} element={<h1>hello</h1>}></Route>
       </Routes>
     </BrowserRouter>
   );
