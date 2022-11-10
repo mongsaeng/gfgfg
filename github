@@ -1,0 +1,14 @@
+echo "# gfgfg" >> README.md 
+git init 
+git add README.md 
+git commit -m "첫 번째 커밋" 
+git branch -M main 
+git remote add origin xxxxxxxxxxxxxxx
+git push -u origin 기본
+
+//////////////////
+
+
+git remote add origin xxxxxxxxxxxxxxxxx
+git branch -M main 
+git push -u origin main

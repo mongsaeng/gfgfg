@@ -1,0 +1,87 @@
+/*
+ --- 리액트 수업 ---
+
+ ★ 문자열 안에 변수를 넣어야 하는 경우 `${variable}` => `` 사용
+
+ 1. prop-type
+  - 컴포넌트에 규칙을 정함
+  - console에 경고를 출력하나, 소스의 실행은 막지 않음
+  - ex)
+    Btn.propTypes = {
+      text: PropTypes.string.isRequired,
+      fontSize: PropTypes.number,
+    };
+  - isRequired : "필수"
+
+  2. React App
+    - https://create-react-app.dev/
+    - node, npx
+    - npx create-ract-app xxxx
+    - npm start
+    - npm i prop-types
+
+  3. Css module
+    - xx.module.css 저장
+    - import styles from "./route";
+    - 랜덤한 Class로 컴포넌트/스타일들을 독립적이게 유지시켜줌
+
+  4. useState
+    - import 활용가능
+      ex) import { useState } from "react";
+    - item(1) : data
+    - item(2) : data를 수정할 수 있는 함수
+    
+  5. useEffect
+    - state 가 변화할 때 모든 component, code 가 다시 실행 => 특정 코드는 한번만 실행 가능 
+    - argument(1) : 실행할 function
+    - dependency(2) : 존재하면, 해당 리스트의 값이 변화할 때만 실행된다.
+      ex) 
+      useEffect(() => { }, [a, b]);
+    - clean up : 컴포넌트가 마운트 해제되는 때에 실행한다.
+      리렌더링 => 이전 Effect Clean up => Effect 실행
+
+  6. Array
+    - 배열 안에 element 를 추가할 때는 "..." 을 사용
+      ex) setToDos((currentArray) => [aaa, ...currentArray]);
+    - 같은 component 의 list를 render할 때는 key(유니크값) 라는 prop 이 필요.
+    - map(value, index, array) : map은 array 를 가져와서,
+      새로운 array를 만들고 변형된 item을 제공한다.
+
+  7. Fetch
+    - 비동기 방식
+    - Promise 기반, HTTP 요청에 최적화
+    - Headers, Request, Response 의 인터페이스
+      ex)
+      fetch(url)
+        .then((response) => response.json())
+        .then((json) => {
+
+        });
+  
+  8. async-await
+    - then 대신 보편적으로 사용
+    - await 을 감싸는 await 을 만들 수 있음
+
+  9. react-router-dom
+    - npm i react-router-dom@6.3.0
+    - BrowserRouter
+    - Routes : 한 번에 하나의 Route만 렌더링
+    - Route : path, element 를 지정
+
+  10. Link
+    - Reload 없이 페이지 이동이 가능한 컴포넌트
+    - to 속성을 사용
+
+  11. useParams
+    - react-router-dom 에서 제공
+    - 파라미터 값 확인
+
+  12. Github package
+    - npm i gh-pages
+    - npm run build
+    - "homepage": "https://mongsaeng.github.io/public"
+    - package.json : scripts 추가
+      "deploy": "gh-pages -d build",
+      "predeplay": "npm run build"
+    - npm run deploy
+*/
